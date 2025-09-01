@@ -10,7 +10,7 @@ const Recommanded = () => {
 
     const LatestRecommandations = (recommandations.at(-1));
   return (
-    <Card className='h-auto w-full border shadow'>
+    <Card className='h-auto w-full border hover:shadow transition duration-600'>
       <CardHeader className='flex w-full justify-between ' >
         <div className='flex gap-x-2 '> 
             <MdOutlineTipsAndUpdates className='size-6'/> 
@@ -28,11 +28,11 @@ const Recommanded = () => {
                     
         </div>
         <div className="flex flex-col w-full px-6  gap-3">
-          <p className='text-[1.11rem] font-light text-gray-500 mb-2'>{LatestRecommandations?.description}</p>
+          <p className='text-[1.11rem] font-sans text-gray-500 mb-2'>{LatestRecommandations?.description}</p>
          <p className='bg-green-100 text-green-700 w-fit rounded-2xl py-2 px-4 text-sm font-medium'>{LatestRecommandations?.categorie} </p>
         </div>
         <Button className='flex gap-x-2  w-full bg-blue-600 text-white hover:bg-blue-700 mt-6 justify-center'>
-          <p>Voir tout vos rendez-vous</p>
+          <p>Voir touts les conseils  </p>
           <ArrowRight/>
         </Button>
       </CardContent>
