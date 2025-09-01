@@ -1,14 +1,15 @@
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { ArrowRight, Calendar, Clock, User } from 'lucide-react'
-import { rendezvous } from '@/constant/AppData'
 import Circle from '../Circle'
 import { Button } from '../ui/button'
+import { rendezvous } from '@/constant/AppData'
 
 const LastAppointment = () => {
   const LastAppointment = (rendezvous.at(-1));
+
   return (
-    <Card className='h-auto w-full'>
+    <Card className='h-auto w-full hover:shadow transition duration-600'>
       <CardHeader className='flex w-full justify-between ' >
         <div className='flex gap-x-2 '> 
           <Calendar/> 
@@ -43,7 +44,7 @@ const LastAppointment = () => {
             <span className='font-bold text-light'>Type:</span> {LastAppointment?.specialite}
           </p>
         </div>
-        <Button className='flex gap-x-2  w-full bg-blue-600 text-white hover:bg-blue-700 mt-6 justify-center'>
+        <Button className='flex gap-x-2  w-full bg-blue-600 text-white hover:bg-blue-700 mt-12 justify-center'>
           <p>Voir tout vos rendez-vous</p>
           <ArrowRight/>
         </Button>
