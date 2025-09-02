@@ -1,17 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider } from "@/components/ui/sidebar";
 import AppSidebar from "@/components/AppSidebar";
+// import { Inter } from "next/font/google";
+import {  Work_Sans } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const InterSans = Inter({
+//   subsets: ["latin"],
+//   variable: "--font-geist-sans",
+//   display: "swap",
+//   weight: ["400", "500", "600", "700"],
+// });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const workSans = Work_Sans({
   subsets: ["latin"],
+  variable: "--font-work-sans",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,11 +31,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${workSans.variable}  antialiased`}
+        style={{
+          background: "#ffffff",
+          backgroundImage: `
+            radial-gradient(circle at  center, rgba(59, 120, 200, 0.5),transparent 70%)
+          `,
+        }}
       >
         <SidebarProvider>
           <AppSidebar/>
-         <main className="bg-[#f8fafc]">
+         <main >
             {children}
          </main>
         </SidebarProvider>
