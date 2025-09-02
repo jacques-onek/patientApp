@@ -9,83 +9,152 @@ export const patients =
     }
   
   
-  export const rendezvous = [
-    {
-      id: 1,
-      medecin: "Dr. Nathalie Mbala",
-      specialite: "Généraliste",
-      date: "2025-09-03",
-      lieu: "Centre Médical de Gombe",
-      heure: "14:30",
-      statut: "à venir"
-    },
-    {
-      id: 2,
-      medecin: "Dr. Jean-Claude Ilunga",
-      specialite: "Cardiologue",
-      date: "2025-09-15",
-      lieu: "Clinique Ngaliema",
-      heure: "14:30",
-      statut: "à venir"
-    },
-    {
-      id: 3,
-      medecin: "Dr. Chantal Tshibangu",
-      specialite: "Dentiste",
-      date: "2025-08-12",
-      lieu: "Hôpital du Cinquantenaire",
-      heure: "14:30",
-      statut: "passé"
-    },
-    {
-      id: 4,
-      medecin: "Dr. Augustin Mulumba",
-      specialite: "Dermatologue",
-      date: "2025-07-28",
-      lieu: "Polyclinique Kinshasa",
-      heure: "14:30",
-      statut: "passé"
-    },
-    {
-      id: 5,
-      medecin: "Dr. Marie-Louise Kapinga",
-      specialite: "Ophtalmologue",
-      date: "2025-09-20",
-      lieu: "Centre Hospitalier Monkole",
-      heure: "14:30",
-      statut: "à venir"
-    }
-  ];
+    export const rendezvous = [
+      {
+        id: 1,
+        medecin: "Dr. Nathalie Mbala",
+        specialite: "Généraliste",
+        date: "2025-09-03",
+        lieu: "Centre Médical de Gombe",
+        heure: "14:30",
+        statut: "à venir",
+        description: "Fièvre persistante"
+      },
+      {
+        id: 2,
+        medecin: "Dr. Jean-Claude Ilunga",
+        specialite: "Cardiologue",
+        date: "2025-09-15",
+        lieu: "Clinique Ngaliema",
+        heure: "14:30",
+        statut: "à venir",
+        description: "Douleur thoracique"
+      },
+      {
+        id: 3,
+        medecin: "Dr. Chantal Tshibangu",
+        specialite: "Dentiste",
+        date: "2025-08-12",
+        lieu: "Hôpital du Cinquantenaire",
+        heure: "14:30",
+        statut: "passé",
+        description: "Carie dentaire"
+      },
+      {
+        id: 4,
+        medecin: "Dr. Augustin Mulumba",
+        specialite: "Dermatologue",
+        date: "2025-07-28",
+        lieu: "Polyclinique Kinshasa",
+        heure: "14:30",
+        statut: "passé",
+        description: "Éruption cutanée"
+      },
+      {
+        id: 5,
+        medecin: "Dr. Marie-Louise Kapinga",
+        specialite: "Ophtalmologue",
+        date: "2025-09-20",
+        lieu: "Centre Hospitalier Monkole",
+        heure: "14:30",
+        statut: "à venir",
+        description: "Vision floue"
+      }
+    ];
+    
   
-  export const dossiers = [
-    {
-      antecedents: [
-        "Hypertension artérielle diagnostiquée en 2020",
-        "Paludisme à répétition (2018, 2021)"
-      ],
-      allergies: [
-        "Pénicilline",
-        "Arachides"
-      ],
-      traitements: [
-        {
-          medicament: "Amlodipine",
-          posologie: "1 comprimé de 5mg chaque matin",
-          debut: "2023-10-01"
+    export const dossiers = [
+      {
+        titre: "Dossier médical de suivi HTA et paludisme",
+        patient: {
+          nom: "Kabongo Jean",
+          age: 45,
+          sexe: "Masculin",
+          numeroDossier: "DOSS-2025-001"
         },
-        {
-          medicament: "Vitamine D",
-          posologie: "1 gélule par semaine",
-          debut: "2024-03-15"
-        },
-        {
-          medicament: "Paracétamol",
-          posologie: "500mg en cas de douleurs",
-          debut: "2024-12-10"
-        }
-      ]
-    }
-  ];
+        docteur: "Dr. Nathalie Mbala",
+        dateCreation: "2023-10-01",
+        derniereMiseAJour: "2025-08-20",
+        statut: "en cours",
+        symptomes: [
+          "Maux de tête fréquents",
+          "Vertiges",
+          "Fatigue persistante",
+          "Douleurs musculaires occasionnelles"
+        ],
+        antecedents: [
+          {
+            maladie: "Hypertension artérielle",
+            dateDiagnostic: "2020-06-15",
+            docteur: "Dr. Nathalie Mbala",
+            statut: "Maladie chronique"
+          },
+          {
+            maladie: "Paludisme à répétition",
+            dateDiagnostic: "2018-09-20",
+            docteur: "Dr. Jean-Claude Ilunga",
+            statut: "Infection aiguë"
+          },
+          {
+            maladie: "Appendicectomie",
+            dateDiagnostic: "2015-04-10",
+            docteur: "Dr. Patrick Tshibangu",
+            statut: "Chirurgie"
+          },
+          {
+            maladie: "Antécédent familial : diabète (père)",
+            dateDiagnostic: "Historique familial",
+            docteur: "N/A",
+            statut: "Antécédent familial"
+          }
+        ],               
+        allergies: [
+          "Pénicilline",
+          "Arachides"
+        ],
+        traitements: [
+          {
+            medicament: "Amlodipine",
+            posologie: "1 comprimé de 5mg chaque matin",
+            debut: "2023-10-01",
+            statut: "en cours"
+          },
+          {
+            medicament: "Vitamine D",
+            posologie: "1 gélule par semaine",
+            debut: "2024-03-15",
+            statut: "en cours"
+          },
+          {
+            medicament: "Paracétamol",
+            posologie: "500mg en cas de douleurs",
+            debut: "2024-12-10",
+            statut: "au besoin"
+          },
+          {
+            medicament: "Hydroxychloroquine",
+            posologie: "200mg pendant 7 jours",
+            debut: "2021-06-05",
+            fin: "2021-06-12",
+            statut: "terminé"
+          }
+        ],
+        examens: [
+          {
+            type: "Tension artérielle",
+            resultat: "145/95 mmHg",
+            date: "2025-08-15"
+          },
+          {
+            type: "Analyse sanguine",
+            resultat: "Normale sauf légère anémie",
+            date: "2025-08-10"
+          }
+        ],
+        notes: "Patient suivi pour HTA, traitement bien toléré. Surveillance mensuelle recommandée."
+      }
+    ];
+    
   
   export const recommandations = [
     {
